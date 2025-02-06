@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>Flask App</h1>
+    <p>Flask app tutorial session</p>
+    
+    <!-- Uncomment this line if you want to use content as a single variable -->
+    <!-- <p>Join our {{ content }}</p> -->
+
+    <!-- Correct Jinja for loop syntax -->
+    {% for i in content %}
+        <p>{{ i }}</p>
+        
+        {% if i == "ML" %}
+            <p>Machine Learning</p>
+        {% elif i == "DL" %}
+            <p>Deep Learning</p>
+        {% elif i == "AI" %}
+            <p>Artificial Intelligence</p>
+        {% elif i == "DS" %}
+            <p>Data Science</p>
+        {% endif %}
+    
+    {% endfor %}
+</body>
+</html>

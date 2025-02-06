@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+<body>
+    <h1>Contact Details</h1>
+
+    <!--  Display form validation errors (if any) -->
+    {% for msg in form.name.errors %}
+        <div style="color: red;">{{ msg }}</div>
+    {% endfor %}
+
+    {% for msg in form.email.errors %}
+        <div style="color: red;">{{ msg }}</div>
+    {% endfor %}
+
+    <!--  Form Submission -->
+    <form action="/contact" method="post">
+        {{ form.hidden_tag() }}  <!--  CSRF protection -->
+
+        <p>{{ form.name.label }}: {{ form.name }}</p>
+        <p>{{ form.Gender.label }}: {{ form.Gender }}</p>
+        <p>{{ form.Address.label }}: {{ form.Address }}</p>
+        <p>{{ form.email.label }}: {{ form.email }}</p>
+        <p>{{ form.Age.label }}: {{ form.Age }}</p>
+        <p>{{ form.language.label }}: {{ form.language }}</p>
+
+        {% if form.comment %}
+            <p>{{ form.comment.label }}: {{ form.comment }}</p>
+        {% endif %}
+
+        <p>{{ form.submit }}</p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<!-- Declares the document as an HTML5 document -->
+
+<html>
+<head>
+    <title>Login Page</title>  <!-- Sets the title of the page (displayed in the browser tab) -->
+</head>
+<body>
+    <h1>Welcome to the Login Page</h1>  <!-- Main heading of the page -->
+
+    <p>Enter your Name:</p>  <!-- Paragraph prompting the user to enter their name -->
+
+    <form action="/login" method="post">  
+        <!-- Form element with POST method (used to send data securely) -->
+        
+        <input type="text" name="username" required />  
+        <!-- Changed 'name="name"' to 'name="username"' to match Flask backend -->
+        <!-- 'required' ensures the field is not left empty -->
+        
+        <input type="submit" value="Submit" />  
+        <!-- Submit button to send form data -->
+    </form>
+</body>
+</html>

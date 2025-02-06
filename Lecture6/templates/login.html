@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<!-- Declares the document as an HTML5 document -->
+
+<html>
+<head>
+    <title>Login Page</title>  <!-- Sets the title of the page (displayed in the browser tab) -->
+</head>
+<body>
+    <h1>Welcome to the Login Page</h1>  <!-- Main heading of the page -->
+
+    <!-- Display Flash Messages (from Flask backend) -->
+    {% with messages = get_flashed_messages() %} 
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>  <!-- Displays the flashed message -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <p>Enter your Name:</p>  <!-- Paragraph prompting the user to enter their name -->
+
+
+    <!-- Form to collect user input -->
+    <form action="/login" method="post">  
+        <!-- 'action="/login"' sends data to the Flask backend at the /login route -->
+        <!-- 'method="post"' ensures the data is sent securely -->
+
+        <input type="text" name="username" required />  
+        <!-- Input field for username -->
+        <!-- 'name="username"' ensures Flask can retrieve the input data -->
+        <!-- 'required' makes sure the user must enter a value -->
+
+        <input type="submit" value="Submit" />  
+        <!-- Button to submit the form -->
+    </form>
+</body>
+</html>  

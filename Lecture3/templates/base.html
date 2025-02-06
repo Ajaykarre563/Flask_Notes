@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Declares the document type as HTML5 -->
+    <title>{% block title %}Ajay_Karre{% endblock %}</title>
+    <!-- Flask template block for title, allowing dynamic content -->
+</head> 
+<body>
+    <h1>Welcome to Flask today</h1> 
+    <!-- Static heading that appears on every page using this template -->
+
+    {% block content %} {% endblock %}
+    <!-- Placeholder for dynamic content, which will be overridden by child templates -->
+</body>
+</html>

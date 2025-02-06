@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f9f9f9;
+    }
+    .result-container {
+      width: 320px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: orange;
+      font-weight: bold;
+    }
+    a:hover {
+      color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h1>BMI Result</h1>
+    <p>{{ pred|safe }}</p>
+    <a href="/">Go Back</a>
+  </div>
+</body>
+</html>

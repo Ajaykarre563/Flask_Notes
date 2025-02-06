@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Contact Details</title>
+    </head>
+    <body>
+        <h1>Enter Your Name</h1>
+        <form method="post">
+            {{ form.hidden_tag() }}  <!-- CSRF Token -->
+            <label for="name">{{ form.name.label }}</label>
+            {{ form.name() }}  <!-- Input Field -->
+            {{ form.submit() }}  <!-- Submit Button -->
+        </form>
+
+        {% if name %}  <!-- Only show if name is provided -->
+            <p>Your name is: <strong>{{ name }}</strong></p>
+        {% endif %}
+    </body>
+</html>
